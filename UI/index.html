@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <input
+          type="search"
+          name="location-search"
+          id="locationSearch"
+          placeholder="Search Location (Name, IP, Zip Code)..."
+        />
+      </form>
+      <div class="results-box">
+        <h2 class="results-box__title">Weather in New Jersey</h2>
+        <div class="results-box__data">
+          <div class="results-box__data--temp">
+            <span>26 </span>
+            <span>℃</span>
+          </div>
+          <div class="results-box__data--condition">
+            <img
+              src="http://cdn.weatherapi.com/weather/64x64/day/116.png"
+              alt="Current Location Condition Sign"
+            />
+            <span>Cloudy</span>
+          </div>
+          <div class="results-box__data--humidity">Humidity: 45%</div>
+          <div class="results-box__data--wind">Wind Speed: 3.4 km/hr</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
