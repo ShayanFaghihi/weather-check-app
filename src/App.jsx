@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from "react";
 
-import UI from './components/UI';
-import FetchData from './components/FetchData';
-import ShowResults from './components/ShowResults';
+import UI from "./components/UI";
+import FetchData from "./components/FetchData";
+import ShowResults from "./components/ShowResults";
 
-import './App.css'
+import "./App.css";
 
 const App = () => {
+  const [currentData, setCurrentData] = useState('');
+
+  const changeResultsHandler = (data) => {
+    if(data) {
+      setCurrentData(data)
+    }
+  }
   return (
     <UI>
-        <FetchData />
-        <ShowResults />
+      <FetchData changeResults = {changeResultsHandler} />
+      <ShowResults results={currentData} />
     </UI>
-  )
-}
+  );
+};
 
-export default App
+export default App;

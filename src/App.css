@@ -46,7 +46,6 @@ body {
 /* Form */
 .form {
     position: relative;
-    margin-bottom: 2rem;
 }
 .form input {
   width: 100%;
@@ -87,6 +86,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-top: 2rem;
 }
 
 .results-box__title {
