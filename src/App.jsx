@@ -7,17 +7,22 @@ import ShowResults from "./components/ShowResults";
 import "./App.css";
 
 const App = () => {
-  const [currentData, setCurrentData] = useState('');
+  const [currentData, setCurrentData] = useState("");
+  const [error, setError] = useState("");
 
-  const changeResultsHandler = (data) => {
-    if(data) {
-      setCurrentData(data)
+  const changeResultsHandler = ({ data, error }) => {
+    if (data) {
+      setError("");
+      setCurrentData(data);
+    } else if (error) {
+      setCurrentData("");
+      setError(error);
     }
-  }
+  };
   return (
     <UI>
-      <FetchData changeResults = {changeResultsHandler} />
-      <ShowResults results={currentData} />
+      <FetchData changeResults={changeResultsHandler} />
+      <ShowResults results={currentData} error={error} />
     </UI>
   );
 };

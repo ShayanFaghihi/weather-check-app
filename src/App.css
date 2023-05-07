@@ -114,3 +114,15 @@ body {
     width: 30px;
     display: inline-block;
 }
+/* Spinner */
+.spinner {
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Error */
+.error {
+    color: #fff;
+    text-align: center;
+    margin-top: 2rem;
+}

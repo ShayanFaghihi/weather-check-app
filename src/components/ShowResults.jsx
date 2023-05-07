@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShowResults = ({results} ) => {
+const ShowResults = ({results,error} ) => {
   if (results) {
     const location = results.location.name;
     const tempC = results.current.temp_c;
@@ -30,6 +30,8 @@ const ShowResults = ({results} ) => {
         </div>
       </div>
     );
+  } if (error) {
+    return <p className="error">{error}</p>
   }
 };
 
