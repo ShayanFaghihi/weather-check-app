@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Bars } from "react-loader-spinner";
 
-const API_URL = "http://api.weatherapi.com/v1/current.json";
+const API_URL = "https://api.weatherapi.com/v1/current.json";
 const API_KEY = "f0769b2f8e44482293b134836230105";
 
 const FetchData = ({ changeResults }) => {
