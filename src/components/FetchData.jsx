@@ -4,7 +4,7 @@ import axios from "axios";
 import { Bars } from "react-loader-spinner";
 
 const API_URL = "https://api.weatherapi.com/v1/current.json";
-const API_KEY = "f0769b2f8e44482293b134836230105";
+const API_KEY = "034786bf1a674163844161618231205";
 
 const FetchData = ({ changeResults }) => {
   const [query, setQuery] = useState("");

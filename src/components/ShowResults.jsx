@@ -1,6 +1,7 @@
 import React from "react";
 
 const ShowResults = ({results,error} ) => {
+
   if (results) {
     const location = results.location.name;
     const tempC = results.current.temp_c;
@@ -10,13 +11,14 @@ const ShowResults = ({results,error} ) => {
     const humidity = results.current.humidity;
     const windSpeed = results.current.wind_kph;
 
+
     return (
       <div className="results-box">
         <h2 className="results-box__title">Weather in {location}</h2>
         <div className="results-box__data">
           <div className="results-box__data--temp">
-            <span>{tempC} </span>
-            <span>℃</span>
+            <span>{!isFarenheit ? tempC : tempF } </span>
+            <span>{!isFarenheit ? '℃' : '℉'}</span>
           </div>
           <div className="results-box__data--condition">
             <img
