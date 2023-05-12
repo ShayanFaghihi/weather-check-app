@@ -114,6 +114,10 @@ body {
     width: 30px;
     display: inline-block;
 }
+
+.toggleSwitch .MuiSwitch-track {
+   background-color: white;
+  }
 /* Spinner */
 .spinner {
     justify-content: center;
