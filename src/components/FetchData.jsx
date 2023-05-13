@@ -24,11 +24,14 @@ const FetchData = ({ changeResults }) => {
     };
 
     const error = () => {
-      alert("Unable to retrieve your location!");
+      changeResults({ data: "", error: "Unable to retrieve your location!" });
     };
 
     if (!navigator.geolocation) {
-      alert("Geolocation is not supported by your browser");
+      changeResults({
+        data: "",
+        error: "Geolocation is not supported by your browser",
+      });
     } else {
       navigator.geolocation.getCurrentPosition(success, error);
     }
@@ -54,6 +57,7 @@ const FetchData = ({ changeResults }) => {
         }
       })
       .catch((err) => {
+        console.log(err);
         if (err.code === "ERR_NETWORK") {
           changeResults({
             data: "",
