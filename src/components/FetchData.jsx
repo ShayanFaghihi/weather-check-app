@@ -57,11 +57,15 @@ const FetchData = ({ changeResults }) => {
         }
       })
       .catch((err) => {
-        console.log(err);
         if (err.code === "ERR_NETWORK") {
           changeResults({
             data: "",
             error: "Please Check Your Connection, and Try Again!",
+          });
+        } else if ((err.code = "ERR_BAD_REQUEST")) {
+          changeResults({
+            data: "",
+            error: "Error in connection! Please try again.",
           });
         } else {
           changeResults({ data: "", error: "Please Check the Query Again!" });
