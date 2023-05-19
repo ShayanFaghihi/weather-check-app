@@ -23,7 +23,7 @@ const FetchData = ({ changeResults }) => {
       setUserCoordinate(`${latitude},${longitude}`);
     };
 
-    const error = () => {
+    const error = (err) => {
       changeResults({ data: "", error: "Unable to retrieve your location!" });
     };
 
@@ -43,6 +43,7 @@ const FetchData = ({ changeResults }) => {
   };
 
   const fetchData = (data) => {
+    console.log(userCoordinate);
     setShowLoadingSpinner(true);
     axios({
       method: "get",
